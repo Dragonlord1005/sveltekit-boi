@@ -17,7 +17,14 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "ni"
+	"postCreateCommand": "ni",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"WakaTime.vscode-wakatime"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
