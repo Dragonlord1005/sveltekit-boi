@@ -9,5 +9,6 @@
 			<li><code>/src/app.postcss</code> - minimal css to make the page full screen, may not be relevant for your project</li>
 			<li><code>/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
 		</ul>
+		<p>Hi</p>
 	</div>
 </div>
