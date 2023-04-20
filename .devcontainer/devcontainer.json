@@ -11,13 +11,13 @@
   		}
 	},
 
-	// "updateContentCommand": "nci",
+	"updateContentCommand": "nci",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "ni"
+	"postCreateCommand": "ni"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
