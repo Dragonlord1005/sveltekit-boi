@@ -19,6 +19,6 @@
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- Footer ---- -->
-	<svelte:fragment slot="footer"><p class="place-content-center">Footer</p></svelte:fragment>
+	<svelte:fragment slot="pageFooter"><p class="grid content-center">Footer</p></svelte:fragment>
 </AppShell>
 <!-- <slot /> -->
