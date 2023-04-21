@@ -21,7 +21,13 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"WakaTime.vscode-wakatime"
+				"WakaTime.vscode-wakatime",
+				"ardenivanov.svelte-intellisense",
+				"svelte.svelte-vscode",
+				"albert.TabOut",
+				"Gruntfuggly.todo-tree",
+				"GitHub.copilot-nightly",
+				"seatonjiang.gitmoji-vscode"
 			]
 		}
 	}
