@@ -27,7 +27,8 @@
 				"albert.TabOut",
 				"Gruntfuggly.todo-tree",
 				"GitHub.copilot-nightly",
-				"seatonjiang.gitmoji-vscode"
+				"seatonjiang.gitmoji-vscode",
+				"GitHub.copilot-labs"
 			]
 		}
 	}
