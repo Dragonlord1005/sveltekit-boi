@@ -7,8 +7,8 @@
 	"features": {
 		"ghcr.io/dhoeric/features/act:1": {},
 		"ghcr.io/devcontainers-contrib/features/npm-package:1": {
-    		"package": "@antfu/ni"
-  		}
+			"package": "@antfu/ni"
+		}
 	},
 
 	"updateContentCommand": "nci",
