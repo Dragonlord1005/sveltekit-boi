@@ -6,6 +6,7 @@
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+	import LogosSvelteIcon from '~icons/logos/svelte-icon'
 </script>
 
 
@@ -13,7 +14,7 @@
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="trail">Sveltekit-boi</svelte:fragment>
-			<svelte:fragment slot="lead">Placeholder for icon</svelte:fragment>
+			<svelte:fragment slot="lead"><LogosSvelteIcon /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Router Slot -->
