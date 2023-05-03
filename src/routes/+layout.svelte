@@ -1,24 +1,53 @@
-<script lang="ts">
-	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
-	import '@skeletonlabs/skeleton/styles/all.css';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-	// Most of your app wide CSS should be put in this file
-	import '../app.postcss';
-	import LogosSvelteIcon from '~icons/logos/svelte-icon';
+<script>
+	import Header from './Header.svelte';
+	import './styles.css';
 </script>
 
-<AppShell>
-	<svelte:fragment slot="header">
-		<AppBar>
-			<svelte:fragment slot="trail">Sveltekit-boi</svelte:fragment>
-			<svelte:fragment slot="lead"><LogosSvelteIcon /></svelte:fragment>
-		</AppBar>
-	</svelte:fragment>
-	<!-- Router Slot -->
-	<slot />
-	<!-- ---- Footer ---- -->
-	<svelte:fragment slot="pageFooter"><p class="grid content-center">Footer</p></svelte:fragment>
-</AppShell>
-<!-- <slot /> -->
+<div class="app">
+	<Header />
+
+	<main>
+		<slot />
+	</main>
+
+	<footer>
+		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	</footer>
+</div>
+
+<style>
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	main {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		width: 100%;
+		max-width: 64rem;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+	}
+
+	footer a {
+		font-weight: bold;
+	}
+
+	@media (min-width: 480px) {
+		footer {
+			padding: 12px 0;
+		}
+	}
+</style>
