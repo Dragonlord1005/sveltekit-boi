@@ -28,7 +28,8 @@
 				"Gruntfuggly.todo-tree",
 				"GitHub.copilot-nightly",
 				"seatonjiang.gitmoji-vscode",
-				"GitHub.copilot-labs"
+				"GitHub.copilot-labs",
+				"pivaszbs.svelte-autoimport"
 			]
 		}
 	}
