@@ -5,12 +5,11 @@ import Counter from './Counter.svelte';
 
 describe('Counter testing', () => {
 	test('renders', () => {
-		// Imports
-		const { getByLabelText, getByTestId } = render(Counter);
+		const counterComponent = render(Counter);
 		// Defines the elements to be tested
-		const decreaseButton = getByLabelText('Decrease the counter by one');
-		const increaseButton = getByLabelText('Increase the counter by one');
-		const counterDigits = getByTestId('counter-digits');
+		const decreaseButton = counterComponent.getByLabelText('Decrease the counter by one');
+		const increaseButton = counterComponent.getByLabelText('Increase the counter by one');
+		const counterDigits = counterComponent.getByTestId('counter-digits');
 
 		// Checks if the elements are in the document
 		expect(decreaseButton).toBeInTheDocument();
