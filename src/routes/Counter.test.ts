@@ -1,33 +1,32 @@
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
+// Switch to userEvent
+
 import Counter from './Counter.svelte';
-import userEvent from '@testing-library/user-event';
 
-describe('Counter', () => {
-    it('should render', () => {
-        render(Counter);
-        expect(Counter).toMatchSnapshot();
-    });
+test('renders', () => {
+  // Imports
+  const { getByLabelText, getByTestId } = render(Counter);
+  // Defines the elements to be tested
+  const decreaseButton = getByLabelText('Decrease the counter by one');
+  const increaseButton = getByLabelText('Increase the counter by one');
+  const counterDigits = getByTestId('counter-digits');
 
-    it('should be able to increment', async () => {
-        const user = userEvent.setup()
+  // Checks if the elements are in the document
+  expect(decreaseButton).toBeInTheDocument();
+  expect(increaseButton).toBeInTheDocument();
+  expect(counterDigits).toBeInTheDocument();
+});
 
-        const { component } = render(Counter);
+test('increases count', async () => {
+  const { getByLabelText, getByText, getByTestId } = render(Counter);
 
-        // Mock the increment function
-        let count = 0;
-        const mock = vi.fn((event) => {
-            count = event.detail.count;
-            console.log('count', count);
-        });
-        component.$on('increment', mock);
+  const CounterDigits = getByTestId('counter-digits');
+  const increaseButton = getByLabelText('Increase the counter by one');
 
-        const button = screen.getByRole('button', { name: /increase the counter by one/i });
-        await user.click(button);
+  expect(CounterDigits).toHaveTextContent('0');
 
-        // expect(mock).toHaveBeenCalled();
-        expect(count).toBe(1);
+  await fireEvent.click(increaseButton);
 
-    });
-}
-);
+  expect(getByText('1')).toBeInTheDocument();
+  expect(CounterDigits).toHaveTextContent('1');
+});
