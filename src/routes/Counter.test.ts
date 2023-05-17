@@ -3,6 +3,7 @@ import { render } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
 import Counter from './Counter.svelte';
 
+describe('Counter testing', () => {
 test('renders', () => {
   // Imports
   const { getByLabelText, getByTestId } = render(Counter);
@@ -27,4 +28,6 @@ test('increases count', async () => {
   await userEvent.click(increaseButton);
 
   expect(getByText('1')).toBeInTheDocument();
+});
+
 });
