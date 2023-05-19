@@ -23,18 +23,4 @@
 		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
 		using it with JavaScript disabled!
 	</p>
-</div>
-
-<style>
-	@import '@fontsource/fira-mono';
-	pre {
-		font-size: 16px;
-		font-family: var(--font-mono);
-		background-color: rgba(255, 255, 255, 0.45);
-		border-radius: 3px;
-		box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-		padding: 0.5em;
-		overflow-x: auto;
-		color: var(--color-text);
-	}
-</style>
+</div>zzz
