@@ -5,7 +5,11 @@ const config = {
 		extend: {}
 	},
 
-	plugins: []
+	plugins: [],
+
+	corePlugins: {
+		preflight: false
+	}
 };
 
 module.exports = config;
