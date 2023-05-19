@@ -29,7 +29,8 @@
 				"GitHub.copilot-nightly",
 				"seatonjiang.gitmoji-vscode",
 				"GitHub.copilot-labs",
-				"pivaszbs.svelte-autoimport"
+				"pivaszbs.svelte-autoimport",
+				"csstools.postcss"
 			]
 		}
 	}
