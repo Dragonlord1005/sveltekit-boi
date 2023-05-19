@@ -1,9 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config';
+import { imagetools } from 'vite-imagetools'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
-	plugins: [sveltekit()],
+	plugins: [sveltekit(), imagetools()],
 	define: {
 		// Eliminate in-source test code
 		'import.meta.vitest': 'undefined'

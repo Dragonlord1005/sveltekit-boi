@@ -1,7 +1,7 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import welcome from '$lib/images/svelte-welcome.png?format=webp&h=2048&w=495';
+	import welcome_fallback from '$lib/images/svelte-welcome.png?format=png&h=2048&w=495';
 </script>
 
 <svelte:head>
