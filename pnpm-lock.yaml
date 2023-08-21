@@ -42,8 +42,8 @@ devDependencies:
     specifier: 5.62.0
     version: 5.62.0(eslint@8.47.0)(typescript@5.0.4)
   '@vitest/coverage-c8':
-    specifier: 0.31.1
-    version: 0.31.1(vitest@0.31.1)
+    specifier: 0.33.0
+    version: 0.33.0(vitest@0.31.1)
   '@vitest/ui':
     specifier: 0.31.1
     version: 0.31.1(vitest@0.31.1)
@@ -957,14 +957,15 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@vitest/coverage-c8@0.31.1(vitest@0.31.1):
-    resolution: {integrity: sha512-6TkjQpmgYez7e3dbAUoYdRXxWN81BojCmUILJwgCy39uZFG33DsQ0rSRSZC9beAEdCZTpxR63nOvd9hxDQcJ0g==}
+  /@vitest/coverage-c8@0.33.0(vitest@0.31.1):
+    resolution: {integrity: sha512-DaF1zJz4dcOZS4k/neiQJokmOWqsGXwhthfmUdPGorXIQHjdPvV6JQSYhQDI41MyI8c+IieQUdIDs5XAMHtDDw==}
+    deprecated: v8 coverage is moved to @vitest/coverage-v8 package
     peerDependencies:
       vitest: '>=0.30.0 <1'
     dependencies:
       '@ampproject/remapping': 2.2.1
-      c8: 7.13.0
-      magic-string: 0.30.0
+      c8: 7.14.0
+      magic-string: 0.30.2
       picocolors: 1.0.0
       std-env: 3.3.3
       vitest: 0.31.1(@vitest/ui@0.31.1)(jsdom@22.1.0)
@@ -990,7 +991,7 @@ packages:
   /@vitest/snapshot@0.31.1:
     resolution: {integrity: sha512-L3w5uU9bMe6asrNzJ8WZzN+jUTX4KSgCinEJPXyny0o90fG4FPQMV0OWsq7vrCWfQlAilMjDnOF9nP8lidsJ+g==}
     dependencies:
-      magic-string: 0.30.0
+      magic-string: 0.30.2
       pathe: 1.1.0
       pretty-format: 27.5.1
     dev: true
@@ -1230,8 +1231,8 @@ packages:
       streamsearch: 1.1.0
     dev: true
 
-  /c8@7.13.0:
-    resolution: {integrity: sha512-/NL4hQTv1gBL6J6ei80zu3IiTrmePDKXKXOTLpHvcIWZTVYQlDhVWjjWvkhICylE8EwwnMVzDZugCvdx0/DIIA==}
+  /c8@7.14.0:
+    resolution: {integrity: sha512-i04rtkkcNcCf7zsQcSv/T9EbUn4RXQ6mropeMcjFOsQXQ0iGLAr/xT6TImQg4+U9hmNpN9XdvPkjUL1IzbgxJw==}
     engines: {node: '>=10.12.0'}
     hasBin: true
     dependencies:
