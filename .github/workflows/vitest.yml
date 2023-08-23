@@ -26,7 +26,7 @@ jobs:
       run: pnpm install
 
     - name: Run tests
-      run: pnpm exec vitest run -- --echo
+      run: pnpm exec vitest run
 
     # - name: Check exit code
     #   if: ${{ failure() }}
