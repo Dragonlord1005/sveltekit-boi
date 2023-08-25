@@ -32,9 +32,7 @@ jobs:
 
     - name: Run tests
       run: pnpm exec vitest run --reporter=junit --outputFile=results/report.xml
-    - name: Print directory contents
-      run: ls -R /workspaces/sveltekit-boi
-
+      
     - name: Create and upload test report
       uses: dorny/test-reporter@v1
       if: success() || failure()
@@ -42,8 +40,3 @@ jobs:
         name: Vitest Tests
         path: results/report.xml
         reporter: jest-junit
-
-      
-    # - name: Check exit code
-    #   if: ${{ failure() }}
-    #   run: exit 1
