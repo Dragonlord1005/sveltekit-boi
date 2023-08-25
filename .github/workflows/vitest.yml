@@ -14,28 +14,33 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-
     - name: Install pnpm
       uses: pnpm/action-setup@v2
       with:
         version: latest
 
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'pnpm'
+
+    
     - name: Install dependencies
       run: pnpm install
 
     - name: Run tests
-      run: pnpm exec vitest run --reporter=junit --outputFile=report.xml
+      run: pnpm exec vitest run --reporter=junit --outputFile=results/report.xml
+    - name: Print directory contents
+      run: ls -R /workspaces/sveltekit-boi
 
     - name: Create and upload test report
       uses: dorny/test-reporter@v1
       if: success() || failure()
       with:
         name: Vitest Tests
-        path: /workspaces/sveltekit-boi/report.xml
+        path: results/report.xml
         reporter: jest-junit
 
       
